@@ -1,0 +1,17 @@
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/controller/HomeController.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/conf/ApplicationInitializer.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/ApplicationConfig.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/dao/UserDao.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/domain/Subject.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/service/impl/UserRatesImpl.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/dao/RatesDao.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/domain/Rates.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/service/impl/UserVerificationImpl.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/conf/MvcConfiguration.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/service/UserRates.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/service/UserVerification.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/conf/SecurityConfig.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/controller/RatesController.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/domain/Role.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/domain/User.java
+/home/duo/workspace/pai/dziennik-elektroniczny/src/main/java/pl/polsl/conf/CustomAuthenticationProvider.java

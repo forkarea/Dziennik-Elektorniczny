@@ -12,18 +12,25 @@
 </head>
 <body>
 <ul class="topnav" id="myTopnav">
-  <li><a href="#home">Strona główna</a></li>
-  <li><a href="#news">Oceny</a></li>
-  <li><a href="#contact">Kontakt</a></li>
-  <li><a href="#about">Info</a></li>
+  <li><a href="/">Strona główna</a></li>
+  <li><a href="/rates">Oceny</a></li>
+  <li><a href="/contact">Kontakt</a></li>
+  <li><a href="/info">Info</a></li>
   <li class="icon">
     <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
   </li>
 </ul>
-<c:forEach items="${userrates}" var="rates">
-	${userName}
-    ${rates.rate}
-    ${rates.subject.subjectName}
-</c:forEach>
+<table style="width:30%">
+	<tr>
+		<th>Przedmiot</th>
+		<th>Ocena</th>
+	</tr>
+	<c:forEach items="${userrates}" var="rates">
+	<tr>
+		<td><center>${rates.subject.subjectName}</center></td>
+		<td><center>${rates.rate}</center></td>
+	</tr>
+	</c:forEach>
+</table>
 </body>
 </html>

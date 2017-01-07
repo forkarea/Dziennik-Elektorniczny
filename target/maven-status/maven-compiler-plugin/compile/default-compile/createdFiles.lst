@@ -1,0 +1,17 @@
+pl/polsl/service/impl/UserRatesImpl.class
+pl/polsl/service/UserRates.class
+pl/polsl/dao/RatesDao.class
+pl/polsl/controller/HomeController.class
+pl/polsl/conf/CustomAuthenticationProvider.class
+pl/polsl/domain/Rates.class
+pl/polsl/conf/SecurityConfig.class
+pl/polsl/domain/Subject.class
+pl/polsl/conf/MvcConfiguration.class
+pl/polsl/service/UserVerification.class
+pl/polsl/conf/ApplicationInitializer.class
+pl/polsl/domain/Role.class
+pl/polsl/domain/User.class
+pl/polsl/ApplicationConfig.class
+pl/polsl/dao/UserDao.class
+pl/polsl/service/impl/UserVerificationImpl.class
+pl/polsl/controller/RatesController.class
