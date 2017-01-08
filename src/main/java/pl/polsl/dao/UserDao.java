@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import pl.polsl.domain.User;
 
-@Transactional
 public interface UserDao extends CrudRepository<User, Long>{
 	
 	Optional<User> findByUsername(String username);

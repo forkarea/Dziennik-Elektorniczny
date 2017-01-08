@@ -2,6 +2,7 @@ package pl.polsl.service;
 
 import java.util.Optional;
 
+import pl.polsl.domain.Role;
 import pl.polsl.domain.User;
 
 public interface UserVerification {
@@ -11,5 +12,7 @@ public interface UserVerification {
 	Optional<User> getUserByLogin(String login);
 	
 	Boolean checkPassword(String userPassword, String loginFormPassword);
+	
+	String getRolePerLogin(String login);
 
 }

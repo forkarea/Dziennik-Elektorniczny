@@ -10,15 +10,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<c:set var="role" scope="session" value="${rolePerLogin}"/>
+<c:set var="user" scope="session" value="${user}"/>
+
 	<ul class="topnav" id="myTopnav">
 		<li><a href="/">Strona główna</a></li>
-		<li><a href="/rates">Oceny</a></li>
+		<c:if test="${role eq 'user'}"><li><a href="/rates">Oceny</a></li></c:if>
+		<c:if test="${role eq 'admin'}"><li><a href="/admin">Dodaj ocene</a></li></c:if>
 		<li><a href="/contact">Kontakt</a></li>
 		<li><a href="/info">Info</a></li>
 		<li class="icon"><a href="javascript:void(0);"
 			onclick="myFunction()">&#9776;</a></li>
 	</ul>
-
 
 	<input type="hidden" name="${_csrf.parameterName}"
 		value="${_csrf.token}" />

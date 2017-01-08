@@ -29,6 +29,13 @@ public class Rates {
 	@JoinColumn(name = "subject_id", nullable = false)
 	private Subject subject;
 
+	public Rates(int rate, User user, Subject subject) {
+		super();
+		this.rate = rate;
+		this.user = user;
+		this.subject = subject;
+	}
+
 	public int getRate() {
 		return rate;
 	}
