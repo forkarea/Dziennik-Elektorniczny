@@ -44,8 +44,9 @@
 										<td><input type='password' name='password' /></td>
 									</tr>
 									<tr>
-										<td colspan='2'><center><input name="submit" type="submit"
-											value="submit" /></center></td>
+										<td colspan='2'><center>
+												<input name="submit" type="submit" value="submit" />
+											</center></td>
 									</tr>
 								</table>
 							</center>
@@ -62,6 +63,10 @@
 			<script src="/resources/js/EasePack.min.js"></script>
 			<script src="/resources/js/rAF.js"></script>
 			<script src="/resources/js/demo-1.js"></script>
+
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+
 
 		</div>
 	</div>

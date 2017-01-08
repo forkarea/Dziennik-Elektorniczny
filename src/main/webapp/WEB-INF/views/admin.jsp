@@ -7,8 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="/resources/css/menu.css" rel="stylesheet">
 <script src="/resources/js/menu.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/component.css" />
 </head>
-<body>
+<body background="/resources/img/demo-2-bg.jpg">
 
 	<c:set var="users" scope="session" value="${users}" />
 	<c:set var="subjects" scope="session" value="${subjects}" />
@@ -19,18 +21,18 @@
 		<c:if test="${role eq 'user'}"><li><a href="/rates">Oceny</a></li></c:if>
 		<c:if test="${role eq 'admin'}"><li><a href="/admin">Dodaj ocene</a></li></c:if>
 		<li><a href="/contact">Kontakt</a></li>
-		<li><a href="/info">Info</a></li>
 		<li class="icon"><a href="javascript:void(0);"
 			onclick="myFunction()">&#9776;</a></li>
 	</ul>
 
 
 	<form action="/addRates" method="Post">
+	<h1 class="main-title">
 		<table>
 			<tr>
-				<th>Uczniowie</th>
-				<th>Przedmioty</th>
-				<th>Ocena</th>
+				<th><font color = "white">Uczniowie</font></th>
+				<th><font color = "white">Przedmioty</font></th>
+				<th><font color = "white">Ocena</font></th>
 			</tr>
 			<tr>
 				<td><select id="users_select" name="user">
@@ -47,6 +49,7 @@
 			</tr>
 		</table>
 		<input type="submit" value="Submit" />
+		</h1>
 	</form>
 
 	<input type="hidden" name="${_csrf.parameterName}"

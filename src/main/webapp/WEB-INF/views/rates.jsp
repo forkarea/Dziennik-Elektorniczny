@@ -9,7 +9,7 @@
 <script src="/resources/js/menu.js"></script>
 <title>Insert title here</title>
 </head>
-<body>
+<body background="/resources/img/demo-2-bg.jpg">
 
 	<c:set var="role" scope="session" value="${rolePerLogin}" />
 	<c:set var="user" scope="session" value="${user}" />
@@ -23,7 +23,6 @@
 			<li><a href="/admin">Dodaj ocene</a></li>
 		</c:if>
 		<li><a href="/contact">Kontakt</a></li>
-		<li><a href="/info">Info</a></li>
 		<li class="icon"><a href="javascript:void(0);"
 			onclick="myFunction()">&#9776;</a></li>
 	</ul>

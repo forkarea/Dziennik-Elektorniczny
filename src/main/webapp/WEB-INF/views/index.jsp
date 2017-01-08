@@ -6,10 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="/resources/css/menu.css" rel="stylesheet">
+<link href="/resources/css/login.css" rel="stylesheet">
 <script src="/resources/js/menu.js"></script>
-<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/component.css" />
 </head>
-<body>
+<body background="/resources/img/demo-2-bg.jpg">
 
 <c:set var="role" scope="session" value="${rolePerLogin}"/>
 <c:set var="user" scope="session" value="${user}"/>
@@ -19,12 +21,11 @@
 		<c:if test="${role eq 'user'}"><li><a href="/rates">Oceny</a></li></c:if>
 		<c:if test="${role eq 'admin'}"><li><a href="/admin">Dodaj ocene</a></li></c:if>
 		<li><a href="/contact">Kontakt</a></li>
-		<li><a href="/info">Info</a></li>
 		<li class="icon"><a href="javascript:void(0);"
 			onclick="myFunction()">&#9776;</a></li>
 	</ul>
-
-	<input type="hidden" name="${_csrf.parameterName}"
-		value="${_csrf.token}" />
+	
+	
+	<h1 class="main-title"> Witamy w dzienniku elektronicznym, więcej informacji w zakładce info.</h1>
 </body>
 </html>

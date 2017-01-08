@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +19,7 @@ import pl.polsl.domain.User;
 import pl.polsl.service.AddRates;
 import pl.polsl.service.GetSubject;
 import pl.polsl.service.GetUser;
+import pl.polsl.service.UserVerification;
 
 @Controller
 public class AdminController {
@@ -36,6 +39,9 @@ public class AdminController {
 	@Autowired
 	SubjectDao subjectDao;
 	
+	@Autowired
+	UserVerification userVerification;
+	
 	@RequestMapping(value = "/admin")
 	public ModelAndView adminPage(ModelMap model) {
 
@@ -43,6 +49,13 @@ public class AdminController {
 		List<User> users = getUser.getUsers();
 		model.addAttribute("subjects", subjects);
 		model.addAttribute("users", users);
+		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String userName = auth.getName();
+		Optional<User> user = userVerification.getUserByLogin(userName);
+		String rolePerLogin = userVerification.getRolePerLogin(userName);
+		model.addAttribute("user", user.get());
+		model.addAttribute("role", rolePerLogin);
 
 		return new ModelAndView("admin", "model", model);
 	}
@@ -55,6 +68,13 @@ public class AdminController {
 		Subject subject = subjectDao.findBySubjectName(subjectName);
 		
 		addRates.addRatesPerUser(user.get(), subject, rate);
+		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String userName = auth.getName();
+		Optional<User> userAuth = userVerification.getUserByLogin(userName);
+		String rolePerLogin = userVerification.getRolePerLogin(userName);
+		model.addAttribute("user", userAuth.get());
+		model.addAttribute("role", rolePerLogin);
 		
 		return new ModelAndView("admin", "model", model);
 	}

@@ -4,8 +4,6 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.polsl</groupId>
-	<artifactId>polsl</artifactId>
-	<version>0.1.0</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -46,11 +44,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
 		</dependency>
@@ -70,6 +63,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.17</version>
 		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 	</dependencies>
 
 	<properties>
@@ -97,4 +96,5 @@
 	</build>
 
 	<packaging>war</packaging>
+	<artifactId>ROOT</artifactId>
 </project>
