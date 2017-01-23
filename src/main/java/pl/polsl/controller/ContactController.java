@@ -20,7 +20,7 @@ public class ContactController {
 
 	@RequestMapping(value = "/contact")
 	public ModelAndView contact(){
-		ModelAndView model = new ModelAndView("index") ;
+		ModelAndView model = new ModelAndView("contact") ;
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		String userName = auth.getName();
 		Optional<User> user = userVerification.getUserByLogin(userName);

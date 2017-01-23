@@ -21,7 +21,7 @@ public class HomeController {
 
 	@RequestMapping(value = "/")
 	public ModelAndView home(){
-		ModelAndView model = new ModelAndView("contact") ;
+		ModelAndView model = new ModelAndView("index") ;
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		String userName = auth.getName();
 		Optional<User> user = userVerification.getUserByLogin(userName);

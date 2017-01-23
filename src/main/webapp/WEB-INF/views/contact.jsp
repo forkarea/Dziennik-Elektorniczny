@@ -26,6 +26,6 @@
 	</ul>
 	
 	
-	<h1 class="main-title"> mail: witold.walaszek.1992@gmail.com</h1>
+	<h1 class="main-title"> mail: witold.walaszek.1992@gmail.com & r.wowra@gmail.com</h1>
 </body>
 </html>

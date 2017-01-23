@@ -33,8 +33,8 @@
 		</tr>
 		<c:forEach items="${userrates}" var="rates">
 			<tr>
-				<td><center>${rates.subject.subjectName}</center></td>
-				<td><center>${rates.rate}</center></td>
+				<td><center><font color="white">${rates.subject.subjectName}</font><</center></td>
+				<td><center><font color="white">${rates.rate}</font></center></td>
 			</tr>
 		</c:forEach>
 	</table>
